@@ -4,10 +4,10 @@
     .module('loc8rApp')
     .service('loc8rData', loc8rData);
 
-  loc8rData.$inject = ['$http', 'authentication'];
-  function loc8rData ($http, authentication) {
+  loc8rData.$inject = ['$http'];
+  function loc8rData ($http) {
     var locationByCoords = function (lat, lng) {
-      return $http.get('/api/locations?lng=' + lng + '&lat=' + lat + '&maxDistance=20');
+      return $http.get('/api/locations?lng=' + lng + '&lat=' + lat + '&maxDistance=200000000000000000000000');
     };
 
     var locationById = function (locationid) {
@@ -15,11 +15,7 @@
     };
 
     var addReviewById = function (locationid, data) {
-      return $http.post('/api/locations/' + locationid + '/reviews', data, {
-        headers: {
-          Authorization: 'Bearer '+ authentication.getToken()
-        }
-      });
+      return $http.post('/api/locations/' + locationid + '/reviews', data);
     };
 
     return {
