@@ -304,9 +304,9 @@ html {
 body {
   font-family: "Cabin", Arial, sans-serif;
   font-size: 14px;
-  line-height: 1.428571429;
-  color: #ffffff;
-  background-color: #108a93;
+  line-height: 1.42857143;
+  color: #ebebeb;
+  background-color: #2b3e50;
 }
 
 input,
