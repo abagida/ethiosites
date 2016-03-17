@@ -2,7 +2,7 @@
   <form id="addReview" name="addReview" role="form" ng-submit="vm.onSubmit()" class="form-horizontal">
     <div class="modal-header">
       <button type="button" ng-click="vm.modal.cancel()" class="close"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-      <h4 id="myModalLabel" class="modal-title">Add your comment for {{ vm.locationData.locationName }}</h4>
+      <h4 id="myModalLabel" class="modal-title">Add your PM info for {{ vm.locationData.locationName }}</h4>
     </div>
     <div class="modal-body">
       <div role="alert" ng-show="vm.formError" class="alert alert-danger">{{ vm.formError }}</div>
@@ -27,7 +27,7 @@
     </div>
     <div class="modal-footer">
       <button ng-click="vm.modal.cancel()" type="button" class="btn btn-default">Cancel</button>
-      <button type="submit" class="btn btn-primary">Submit comment</button>
+      <button type="submit" class="btn btn-primary">Submit PM comment</button>
     </div>
   </form>
 </div>
