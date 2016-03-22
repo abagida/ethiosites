@@ -13,8 +13,8 @@
     var vm = this;
     console.log(window.location);
     vm.pageHeader = {
-      title: 'Site-Locator',
-      strapline: 'Find sites near you!'
+      title: 'Ethio Telecom Sites',
+      strapline: 'Find ET sites near you!'
     };
     vm.sidebar = {
       content: "Looking for information about ET network sites? Enable location on your device ,sit back and let this web app help you find the place you're looking for."
