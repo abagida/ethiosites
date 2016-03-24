@@ -1,8 +1,7 @@
 (function () {
 
   angular
-    .module('loc8rApp')
-    .service('geolocation', geolocation);
+    .module('loc8rApp');
 
   function geolocation () {
     var getPosition = function (cbSuccess, cbError, cbNoGeo) {
