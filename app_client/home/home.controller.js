@@ -5,7 +5,7 @@
     .controller('homeCtrl', homeCtrl);
 
   homeCtrl.$inject = ['$scope', 'loc8rData'];
-  function homeCtrl ($scope, loc8rData) {
+  function homeCtrl ($scope, loc8rData,geolocation) {
     // Nasty IE9 redirect hack (not recommended)
     if (window.location.pathname !== '/') {
       window.location.href = '/#' + window.location.pathname;
