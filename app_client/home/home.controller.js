@@ -48,7 +48,7 @@
       });
     };
 
-    geolocation.getPosition(vm.showError,vm.noGeo);
+    geolocation.getPosition(vm.getData,vm.showError,vm.noGeo);
 
   }
 
