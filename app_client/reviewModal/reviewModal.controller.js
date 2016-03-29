@@ -1,7 +1,7 @@
 (function () {
 
   angular
-    .module('loc8rApp')
+    .module('ethiosite')
     .controller('reviewModalCtrl', reviewModalCtrl);
 
   reviewModalCtrl.$inject = ['$modalInstance', 'loc8rData', 'locationData'];

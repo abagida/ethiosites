@@ -1,7 +1,7 @@
 (function () {
 
   angular
-    .module('loc8rApp')
+    .module('ethiosite')
     .controller('aboutCtrl', aboutCtrl);
 
   function aboutCtrl() {

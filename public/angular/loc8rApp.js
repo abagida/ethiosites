@@ -1,4 +1,4 @@
-angular.module('loc8rApp', []);
+angular.module('ethiosite', []);
 
 var _isNumeric = function (n) {
   return !isNaN(parseFloat(n)) && isFinite(n);

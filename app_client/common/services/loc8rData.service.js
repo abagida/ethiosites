@@ -1,7 +1,7 @@
 (function() {
 
   angular
-    .module('loc8rApp')
+    .module('ethiosite')
     .service('loc8rData', loc8rData);
 
   loc8rData.$inject = ['$http', 'authentication'];

@@ -1,11 +1,11 @@
 (function () {
 
   angular
-    .module('loc8rApp')
+    .module('ethiosite')
     .controller('homeCtrl', homeCtrl);
 
-  homeCtrl.$inject = ['$scope', 'loc8rData', 'geolocation'];
-  function homeCtrl ($scope, loc8rData,geolocation) {
+  homeCtrl.$inject = ['$scope', 'loc8rData'];
+  function homeCtrl ($scope, loc8rData) {
     // Nasty IE9 redirect hack (not recommended)
     if (window.location.pathname !== '/') {
       window.location.href = '/#' + window.location.pathname;
@@ -21,7 +21,7 @@
     };
     vm.message = "Checking your location";
 
-    vm.getData = function (position) {
+   
       var lat = 7.67599025763507,
           lng = 36.829517483492964;
       vm.message = "Searching for nearby places";
@@ -34,22 +34,6 @@
         .error(function (e) {
           vm.message = "Sorry, something's gone wrong, please try again later";
         });
-    };
-
-    vm.showError = function (error) {
-      $scope.$apply(function() {
-        vm.message = error.message;
-      });
-    };
-
-    vm.noGeo = function () {
-      $scope.$apply(function() {
-        vm.message = "Geolocation is not supported by this browser.";
-      });
-    };
-
-    geolocation.getPosition(vm.getData,vm.showError,vm.noGeo);
-
   }
 
 })();

@@ -1,6 +1,6 @@
 (function () {
 
-  angular.module('loc8rApp', ['ngRoute', 'ngSanitize', 'ui.bootstrap']);
+  angular.module('ethiosite', ['ngRoute', 'ngSanitize', 'ui.bootstrap']);
 
   function config ($routeProvider, $locationProvider) {
     $routeProvider
@@ -36,7 +36,7 @@
   }
 
   angular
-    .module('loc8rApp')
+    .module('ethiosite')
     .config(['$routeProvider', '$locationProvider', config]);
 
 })();
