@@ -17,7 +17,7 @@
       strapline: 'Find ET sites near you!'
     };
     vm.sidebar = {
-      content: "Looking for information about ET network sites? Enable location on your device ,sit back and let this web app help you find the place you're looking for."
+      content: "Looking for information about ET network sites? Sit back and relax and this web-app  will do it for you."
     };
     vm.message = "Checking your location";
 

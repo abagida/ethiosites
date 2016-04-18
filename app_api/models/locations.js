@@ -15,15 +15,9 @@ var reviewSchema = new mongoose.Schema({
     }
 });
 
-var openingTimeSchema = new mongoose.Schema({
-    days: {
+var siteInfoSchema = new mongoose.Schema({
+    info: {
         type: String,
-        required: true
-    },
-    opening: String,
-    closing: String,
-    closed: {
-        type: Boolean,
         required: true
     }
 });
@@ -46,7 +40,7 @@ var locationSchema = new mongoose.Schema({
         type: [Number],
         index: '2dsphere'
     },
-    openingTimes: [openingTimeSchema],
+    siteInfo: [siteInfoSchema],
     reviews: [reviewSchema]
 });
 
