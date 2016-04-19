@@ -112,15 +112,7 @@ module.exports.locationsCreate = function(req, res) {
     coords: [parseFloat(req.body.lng), parseFloat(req.body.lat)],
     siteInfo: [{
       info: req.body.info1
-    },
-     { info: req.body.info2
-     },
-     {
-      info: req.body.info3
-    },
-
-      {info: req.body.info4
-      }]
+    }]
   }, function(err, location) {
     if (err) {
       console.log(err);
