@@ -14,10 +14,10 @@
               <h2 class="panel-title">Network Site Information</h2>
             </div>
             <div class="panel-body">
-              <p ng-repeat="time in vm.data.location.openingTimes" ng-switch on="time.closed">
-                {{ time.days }} :
-                <span class="opening-time" ng-switch-when="true">closed</span>
-                <span class="opening-time" ng-switch-default>{{ time.opening + " - " + time.closing }}</span>
+              <p ng-repeat="time in vm.data.location.siteInfo">
+                {{ time.info }} 
+                
+        
               </p>
             </div>
           </div>
