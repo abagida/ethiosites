@@ -14,7 +14,7 @@
     console.log(window.location);
     vm.pageHeader = {
       title: 'Ethio Telecom Sites',
-      strapline: 'Find ET sites down here ↓↓↓↓'
+      strapline: 'Find ET sites down here ↓↓↓'
     };
     vm.sidebar = {
       content: "Looking for information about ET network sites? Sit back and relax and this web-app  will do it for you!"
