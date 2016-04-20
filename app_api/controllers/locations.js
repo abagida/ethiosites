@@ -35,7 +35,7 @@ module.exports.locationsListByDistance = function(req, res) {
   var geoOptions = {
     spherical: true,
     maxDistance: theEarth.getRadsFromDistance(maxDistance),
-    num: 100
+    num: 1000
   };
   if ((!lng && lng!==0) || (!lat && lat!==0) || ! maxDistance) {
     console.log('locationsListByDistance missing params');
