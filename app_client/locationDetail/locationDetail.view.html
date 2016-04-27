@@ -14,10 +14,8 @@
               <h2 class="panel-title">Network Site Information</h2>
             </div>
             <div class="panel-body">
-              <p ng-repeat="time in vm.data.location.openingTimes" ng-switch on="time.closed">
-                {{ time.days }} :
-                <span class="opening-time" ng-switch-when="true">closed</span>
-                <span class="opening-time" ng-switch-default>{{ time.opening + " - " + time.closing }}</span>
+              <p ng-repeat="time in vm.data.location.siteInfo">
+                {{ time.info }} 
               </p>
             </div>
           </div>
@@ -38,8 +36,8 @@
             <div class="panel-heading">
               <h2 class="panel-title">Location map</h2>
             </div>
-            <div class="panel-body">
-              <img src="http://maps.googleapis.com/maps/api/staticmap?center={{ vm.data.location.coords[1] }},{{ vm.data.location.coords[0] }}&amp;maptype=hybrid&amp;zoom=17&amp;size=400x350&amp;sensor=false&amp;maptype=hybrid&amp;markers={{ vm.data.location.coords[1] }},{{ vm.data.location.coords[0] }}&amp;scale=2" class="img-responsive img-rounded">
+            <div class="panel-body">  
+	              <img src="http://maps.googleapis.com/maps/api/staticmap?center={{ vm.data.location.coords[1] }},{{ vm.data.location.coords[0] }}&amp;zoom=17&amp;size=400x350&amp;sensor=false&amp;maptype=hybrid&amp;markers={{ vm.data.location.coords[1] }},{{ vm.data.location.coords[0] }}&amp;scale=2" class="img-responsive img-rounded">
             </div>
           </div>
         </div>
@@ -72,7 +70,7 @@
     </div>
     <div class="col-xs-12 col-md-3">
       <p class="lead">{{ vm.data.location.name }} is on Site-Locator.</p>
-      <p>If you've been and you know some important information please leave a comment to help other colleagues just like you.</p>
+      <p>If you've been and you know some important information please register and leave a comment to help other colleagues just like you.</p>
     </div>
   </div>
   <footer-generic></footer-generic>
