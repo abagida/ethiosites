@@ -3,7 +3,7 @@ var apiOptions = {
   server : "http://localhost:3000"
 };
 if (process.env.NODE_ENV === 'production') {
-  apiOptions.server = "https://site-data.herokuapp.com";
+  apiOptions.server = "https://ethiosites.herokuapp.com";
 }
 
 var _isNumeric = function (n) {
