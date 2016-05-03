@@ -25,9 +25,7 @@
             </div>
             <div class="panel-body">
               <p ng-repeat="site in vm.data.location.siteInfo">
-				<div class="label label-warning label-site">
                 {{ site.info }} 
-				</div>
               </p>
             </div>
           </div>
@@ -41,7 +39,21 @@
               </p>
             </div>
           </div>
-		  <div class="panel panel-primary">
+		  
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h2 class="panel-title">Network Equipment</h2>
+            </div>
+            <div class="panel-body">
+              <span class="label label-warning label-facility" ng-repeat="facility in vm.data.location.facilities">
+                <span class="glyphicon glyphicon-ok"></span> 
+                {{ facility }}
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 location-map">
+          <div class="panel panel-primary">
             <div class="panel-heading">
               <h2 class="panel-title">RAN Section Information</h2>
             </div>
@@ -61,20 +73,7 @@
               </p>
             </div>
           </div>
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h2 class="panel-title">Network Equipment</h2>
-            </div>
-            <div class="panel-body">
-              <span class="label label-warning label-facility" ng-repeat="facility in vm.data.location.facilities">
-                <span class="glyphicon glyphicon-ok"></span> 
-                {{ facility }}
-              </span>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 location-map">
-          <div class="panel panel-primary">
+		  <div class="panel panel-primary">
             <div class="panel-heading">
               <h2 class="panel-title">Location map</h2>
             </div>
