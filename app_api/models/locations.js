@@ -42,6 +42,10 @@ var locationSchema = new mongoose.Schema({
     },
     siteInfo: [siteInfoSchema],
     transmission: [siteInfoSchema],
+    core: [siteInfoSchema],
+    ran: [siteInfoSchema],
+    ip: [siteInfoSchema],
+    staff: [siteInfoSchema],
     reviews: [reviewSchema]
 
 });
