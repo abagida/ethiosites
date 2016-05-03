@@ -42,7 +42,7 @@ var locationSchema = new mongoose.Schema({
     },
     siteInfo: [siteInfoSchema],
     reviews: [reviewSchema]
-    transmission:[String]
+    
 });
 
 mongoose.model('Location', locationSchema);
