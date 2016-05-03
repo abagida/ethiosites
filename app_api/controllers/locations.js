@@ -111,7 +111,7 @@ module.exports.locationsCreate = function(req, res) {
     facilities: req.body.facilities.split(","),
     coords: [parseFloat(req.body.lng), parseFloat(req.body.lat)],
     transmission: [{
-      infoo: req.body.info
+      info: req.body.info
     }],
     siteInfo: [{
       info: req.body.info
