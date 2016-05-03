@@ -41,8 +41,9 @@ var locationSchema = new mongoose.Schema({
         index: '2dsphere'
     },
     siteInfo: [siteInfoSchema],
+    transmission: [siteInfoSchema],
     reviews: [reviewSchema]
-    
+
 });
 
 mongoose.model('Location', locationSchema);
