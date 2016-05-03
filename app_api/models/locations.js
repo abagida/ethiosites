@@ -14,7 +14,12 @@ var reviewSchema = new mongoose.Schema({
         "default": Date.now
     }
 });
-
+var txSchema = new mongoose.Schema({
+    info: {
+        type: String,
+        required: true
+    }
+});
 var siteInfoSchema = new mongoose.Schema({
     info: {
         type: String,
@@ -41,7 +46,7 @@ var locationSchema = new mongoose.Schema({
         index: '2dsphere'
     },
     siteInfo: [siteInfoSchema],
-    transmission: [siteInfoSchema],
+    transmission: [txSchema],
     reviews: [reviewSchema]
 
 });
