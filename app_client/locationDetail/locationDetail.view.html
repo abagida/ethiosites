@@ -11,7 +11,48 @@
           <p>{{ vm.data.location.address }}</p>
           <div class="panel panel-primary">
             <div class="panel-heading">
-              <h2 class="panel-title">Network Site Information</h2>
+              <h2 class="panel-title">General Site Information</h2>
+            </div>
+            <div class="panel-body">
+              <span class="label label-warning label-site"ng-repeat="site in vm.data.location.siteInfo">
+			  <span class="glyphicon glyphicon-ok"></span> 
+                {{ site.info }} 
+              </span>
+            </div>
+          </div>
+		  <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h2 class="panel-title">Transmission Section Information</h2>
+            </div>
+            <div class="panel-body">
+              <p ng-repeat="site in vm.data.location.siteInfo">
+                {{ site.info }} 
+              </p>
+            </div>
+          </div>
+		  <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h2 class="panel-title">Core Section Information</h2>
+            </div>
+            <div class="panel-body">
+              <p ng-repeat="site in vm.data.location.siteInfo">
+                {{ site.info }} 
+              </p>
+            </div>
+          </div>
+		  <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h2 class="panel-title">RAN Section Information</h2>
+            </div>
+            <div class="panel-body">
+              <p ng-repeat="site in vm.data.location.siteInfo">
+                {{ site.info }} 
+              </p>
+            </div>
+          </div>
+		  <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h2 class="panel-title">Ip Section Information</h2>
             </div>
             <div class="panel-body">
               <p ng-repeat="site in vm.data.location.siteInfo">
