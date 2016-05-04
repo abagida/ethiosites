@@ -45,7 +45,6 @@ var locationSchema = new mongoose.Schema({
     core: [siteInfoSchema],
     ran: [siteInfoSchema],
     ip: [siteInfoSchema],
-    staff: [siteInfoSchema],
     reviews: [reviewSchema]
 
 });
