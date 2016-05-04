@@ -25,7 +25,7 @@
             </div>
             <div class="panel-body">
               <p ng-repeat="site in vm.data.location.transmission">
-                <span class="label label-warning"> {{ site.info }} </span>
+                <span class="label label-warning"> <span class="glyphicon glyphicon-ok"></span> {{ site.info }} </span>
               </p>
             </div>
           </div>
@@ -35,7 +35,7 @@
             </div>
             <div class="panel-body">
               <p ng-repeat="site in vm.data.location.core">
-                <span class="label label-warning"> {{ site.info }} </span>
+                <span class="label label-warning"> <span class="glyphicon glyphicon-ok"></span> {{ site.info }} </span>
               </p>
             </div>
           </div>
@@ -45,7 +45,7 @@
             </div>
             <div class="panel-body">
               <p ng-repeat="site in vm.data.location.ran">
-				<span class="label label-warning"> {{ site.info }} </span>
+				<span class="label label-warning"> <span class="glyphicon glyphicon-ok"></span> {{ site.info }} </span>
               </p>
             </div>
           </div>
@@ -55,7 +55,7 @@
             </div>
             <div class="panel-body">
               <p ng-repeat="site in vm.data.location.ip">
-               <span class="label label-warning"> {{ site.info }} </span>
+               <span class="label label-warning"> <span class="glyphicon glyphicon-ok"></span> {{ site.info }} </span>
               </p>
             </div>
           </div>
@@ -65,8 +65,9 @@
             </div>
             <div class="panel-body">
               <p ng-repeat="site in vm.data.location.staff">
-               <span class="label label-warning"> 
-			   {{ site.info }} 
+               <span class="label label-warning">
+					<span class="glyphicon glyphicon-ok"></span> 
+						{{ site.info }} 
 			   </span>
               </p>
             </div>
