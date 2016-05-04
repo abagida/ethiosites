@@ -15,7 +15,7 @@
             </div>
 			<div class="panel-body">
               <p ng-repeat="site in vm.data.location.siteInfo">
-                <span class="label label-warning"> {{ site.info }} </span>
+                <span class="label label-warning"> <span class="glyphicon glyphicon-ok"></span> {{ site.info }} </span>
               </p>
             </div>
           </div>
@@ -65,7 +65,9 @@
             </div>
             <div class="panel-body">
               <p ng-repeat="site in vm.data.location.staff">
-               <span class="label label-warning"> {{ site.info }} </span>
+               <span class="label label-warning"> 
+			   {{ site.info }} 
+			   </span>
               </p>
             </div>
           </div>
