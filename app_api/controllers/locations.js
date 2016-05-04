@@ -113,6 +113,18 @@ module.exports.locationsCreate = function(req, res) {
     transmission: [{
       info: req.body.info
     }],
+    core: [{
+      info: req.body.info
+    }],
+    ran: [{
+      info: req.body.info
+    }],
+    ip: [{
+      info: req.body.info
+    }],
+    staff: [{
+      info: req.body.info
+    }],
     siteInfo: [{
       info: req.body.info
     }]
