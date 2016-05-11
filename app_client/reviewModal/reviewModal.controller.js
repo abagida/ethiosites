@@ -21,7 +21,7 @@
 
     vm.doAddReview = function (locationid, formData) {
       loc8rData.addReviewById(locationid, {
-        //rating : formData.rating,
+        
         reviewText : formData.reviewText
       })
         .success(function (data) {
