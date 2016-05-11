@@ -84,38 +84,7 @@ var doAddReview = function(req, res, location, author) {
   }
 };
 
-var updateAverageRating = function(locationid) {
-  console.log("Update rating average for", locationid);
-  Loc
-    .findById(locationid)
-    .select('reviews')
-    .exec(
-      function(err, location) {
-        if (!err) {
-          doSetAverageRating(location);
-        }
-      });
-};
 
-var doSetAverageRating = function(location) {
-  var i, reviewCount, ratingAverage, ratingTotal;
-  if (location.reviews && location.reviews.length > 0) {
-    reviewCount = location.reviews.length;
-    ratingTotal = 0;
-    for (i = 0; i < reviewCount; i++) {
-      ratingTotal = ratingTotal + location.reviews[i].rating;
-    }
-    ratingAverage = parseInt(ratingTotal / reviewCount, 10);
-    location.rating = ratingAverage;
-    location.save(function(err) {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log("Average rating updated to", ratingAverage);
-      }
-    });
-  }
-};
 
 module.exports.reviewsUpdateOne = function(req, res) {
   if (!req.params.locationid || !req.params.reviewid) {
