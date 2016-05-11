@@ -16,9 +16,7 @@ var routesApi = require('./app_api/routes/index');
 
 var app = express();
 
-// view engine setup
-//app.set('views', path.join(__dirname, 'app_server', 'views'));
-//app.set('view engine', 'jade');
+
 
 var appClientFiles = [
   'app_client/app.js',
@@ -37,7 +35,7 @@ var appClientFiles = [
   'app_client/common/directives/navigation/navigation.directive.js',
   'app_client/common/directives/footerGeneric/footerGeneric.directive.js',
   'app_client/common/directives/pageHeader/pageHeader.directive.js',
-  'app_client/common/directives/ratingStars/ratingStars.directive.js'
+  
 ];
 var uglified = uglifyJs.minify(appClientFiles, { compress : false });
 
