@@ -76,7 +76,7 @@ var doAddReview = function(req, res, location, author) {
       if (err) {
         sendJSONresponse(res, 400, err);
       } else {
-        updateAverageRating(location._id);
+        
         thisReview = location.reviews[location.reviews.length - 1];
         sendJSONresponse(res, 201, thisReview);
       }
