@@ -17,7 +17,6 @@ var routesApi = require('./app_api/routes/index');
 var app = express();
 
 
-
 var appClientFiles = [
   'app_client/app.js',
   'app_client/home/home.controller.js',
@@ -58,7 +57,6 @@ app.use(express.static(path.join(__dirname, 'app_client')));
 
 // app.use('/', routes);
 app.use('/api', routesApi);
-
 app.use(function(req, res) {
   res.sendFile(path.join(__dirname, 'app_client', 'index.html'));
 });
