@@ -9,7 +9,7 @@
     var vm = this;
 
     vm.pageHeader = {
-      title: 'Create a new Loc8r account'
+      title: 'Create a new In4mer account'
     };
 
     vm.credentials = {
