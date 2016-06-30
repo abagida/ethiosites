@@ -24,6 +24,13 @@ var appClientFiles = [
   'app_client/auth/login/login.controller.js',
   'app_client/auth/register/register.controller.js',
   'app_client/locationDetail/locationDetail.controller.js',
+  'app_client/transmissionModal/transmissionModal.controller.js',
+  'app_client/staffModal/staffModal.controller.js',
+  'app_client/powerModal/powerModal.controller.js',
+  'app_client/ipModal/ipModal.controller.js',
+  'app_client/ranModal/ranModal.controller.js',
+  'app_client/coreModal/coreModal.controller.js',
+  'app_client/generalModal/generalModal.controller.js',
   'app_client/reviewModal/reviewModal.controller.js',
   'app_client/common/services/authentication.service.js',
   'app_client/common/services/geolocation.service.js',
@@ -33,7 +40,7 @@ var appClientFiles = [
   'app_client/common/directives/navigation/navigation.controller.js',
   'app_client/common/directives/navigation/navigation.directive.js',
   'app_client/common/directives/footerGeneric/footerGeneric.directive.js',
-  'app_client/common/directives/pageHeader/pageHeader.directive.js',
+  'app_client/common/directives/pageHeader/pageHeader.directive.js', 
   
 ];
 var uglified = uglifyJs.minify(appClientFiles, { compress : false });
