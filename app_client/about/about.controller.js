@@ -8,10 +8,10 @@
     var vm = this;
 
     vm.pageHeader = {
-      title: 'About Site In4mer'
+      title: 'About Site-Locator'
     };
     vm.main = {
-      content: 'Site In4mer is created to help Ethio-Telecom colleagues find locations and  informations of Network Elements .\n\n'
+      content: 'Site-Locator is created to help Ethio-Telecom colleagues find locations and  informations of Network sites .\n\n'
           };
   }
 

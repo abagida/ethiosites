@@ -109,8 +109,25 @@ module.exports.locationsCreate = function(req, res) {
     name: req.body.name,
     address: req.body.address,
     facilities: req.body.facilities.split(","),
-    coords: [parseFloat(req.body.lng), parseFloat(req.body.lat)]
-
+    coords: [parseFloat(req.body.lng), parseFloat(req.body.lat)],
+    transmission: [{
+      info: req.body.info
+    }],
+    core: [{
+      info: req.body.info
+    }],
+    ran: [{
+      info: req.body.info
+    }],
+    ip: [{
+      info: req.body.info
+    }],
+    staff: [{
+      info: req.body.info
+    }],
+    siteInfo: [{
+      info: req.body.info
+    }]
   }, function(err, location) {
     if (err) {
       console.log(err);
@@ -148,7 +165,9 @@ module.exports.locationsUpdateOne = function(req, res) {
         location.address = req.body.address;
         location.facilities = req.body.facilities.split(",");
         location.coords = [parseFloat(req.body.lng), parseFloat(req.body.lat)];
-        
+        location.siteInfo= [
+              {info: req.body.info}
+              ];
         location.save(function(err, location) {
           if (err) {
             sendJSONresponse(res, 404, err);
