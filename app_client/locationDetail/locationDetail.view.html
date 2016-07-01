@@ -10,107 +10,134 @@
           <p>{{ vm.data.location.address }}</p>
           <div class="panel panel-primary">
             <div class="panel-heading">
+              <a ng-show="vm.isLoggedIn" ng-click="vm.popupGeneralForm()" class="btn btn-default pull-right">Input</a>
+              <!--<a ng-hide="vm.isLoggedIn" href="/#/login?page={{ vm.currentPath }}" class="btn btn-default pull-right">Login to Update</a>-->
               <h2 class="panel-title">General Site Information</h2>
+
             </div>
-			<div class="panel-body">
-              <p ng-repeat="site in vm.data.location.siteInfo">
-                <span class="label label-warning"> <span class="glyphicon glyphicon-ok"></span> {{ site.info }} </span>
+            <div class="panel-body">
+              <p ng-repeat="site in vm.data.location.generals">
+                <span class="label label-warning"> <span class="glyphicon glyphicon-ok"></span> {{ site.generalText }}</span>
               </p>
             </div>
           </div>
-		  <div class="panel panel-primary">
+          <div class="panel panel-primary">
             <div class="panel-heading">
+              <a ng-show="vm.isLoggedIn" ng-click="vm.popupTransmissionForm()" class="btn btn-default pull-right">Input</a>
+              <!--<a ng-hide="vm.isLoggedIn" href="/#/login?page={{ vm.currentPath }}" class="btn btn-default pull-right">Login to Update</a>-->
               <h2 class="panel-title">Transmission Section Information</h2>
             </div>
             <div class="panel-body">
-              <p ng-repeat="site in vm.data.location.transmission">
-                <span class="label label-warning"> <span class="glyphicon glyphicon-ok"></span> {{ site.info }} </span>
+              <p ng-repeat="site in vm.data.location.transmissions">
+                <span class="label label-warning"> <span class="glyphicon glyphicon-ok"></span> {{ site.transmissionText }} </span>
+
               </p>
             </div>
           </div>
-		  <div class="panel panel-primary">
+          <div class="panel panel-primary">
             <div class="panel-heading">
+              <a ng-show="vm.isLoggedIn" ng-click="vm.popupCoreForm()" class="btn btn-default pull-right">Input</a>
+              <!--<a ng-hide="vm.isLoggedIn" href="/#/login?page={{ vm.currentPath }}" class="btn btn-default pull-right">Login to Update</a>-->
               <h2 class="panel-title">Core Section Information</h2>
             </div>
             <div class="panel-body">
-              <p ng-repeat="site in vm.data.location.core">
-                <span class="label label-warning"> <span class="glyphicon glyphicon-ok"></span> {{ site.info }} </span>
+              <p ng-repeat="site in vm.data.location.cores">
+                <span class="label label-warning"> <span class="glyphicon glyphicon-ok"></span> {{ site.coreText}} </span>
+
               </p>
             </div>
           </div>
-		  <div class="panel panel-primary">
+          <div class="panel panel-primary">
             <div class="panel-heading">
+              <a ng-show="vm.isLoggedIn" ng-click="vm.popupRanForm()" class="btn btn-default pull-right">Input</a>
+              <!--<a ng-hide="vm.isLoggedIn" href="/#/login?page={{ vm.currentPath }}" class="btn btn-default pull-right">Login to Update</a>-->
               <h2 class="panel-title">RAN Section Information</h2>
             </div>
             <div class="panel-body">
-              <p ng-repeat="site in vm.data.location.ran">
-				<span class="label label-warning"> <span class="glyphicon glyphicon-ok"></span> {{ site.info }} </span>
+              <p ng-repeat="site in vm.data.location.rans">
+                <span class="label label-warning"> <span class="glyphicon glyphicon-ok"></span> {{ site.ranText }} </span>
+
               </p>
             </div>
           </div>
-		  <div class="panel panel-primary">
+          <div class="panel panel-primary">
             <div class="panel-heading">
+              <a ng-show="vm.isLoggedIn" ng-click="vm.popupIpForm()" class="btn btn-default pull-right">Input</a>
+              <!--<a ng-hide="vm.isLoggedIn" href="/#/login?page={{ vm.currentPath }}" class="btn btn-default pull-right">Login to Update</a>-->
               <h2 class="panel-title">Ip Section Information</h2>
             </div>
             <div class="panel-body">
-              <p ng-repeat="site in vm.data.location.ip">
-               <span class="label label-warning"> <span class="glyphicon glyphicon-ok"></span> {{ site.info }} </span>
-              </p>
-            </div>
-          </div>
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h2 class="panel-title">Staff Mapping</h2>
-            </div>
-            <div class="panel-body">
-              <p ng-repeat="site in vm.data.location.staff">
-               <span class="label label-warning">
-					<span class="glyphicon glyphicon-ok"></span> 
-						{{ site.info }} 
-			   </span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 location-map">
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h2 class="panel-title">Location map</h2>
-            </div>
-            <div class="panel-body">  
-					<img src="http://maps.googleapis.com/maps/api/staticmap?center={{ vm.data.location.coords[1] }},{{ vm.data.location.coords[0] }}&amp;zoom=17&amp;size=400x900&amp;sensor=false&amp;maptype=hybrid&amp;markers={{ vm.data.location.coords[1] }},{{ vm.data.location.coords[0] }}&amp;scale=2" class="img-responsive img-rounded">            </div>
-          </div>
-        </div>
+              <p ng-repeat="site in vm.data.location.ips">
+               <span class="label label-warning"> <span class="glyphicon glyphicon-ok"></span> {{ site.ipText }} </span>
+
+             </p>
+           </div>
+         </div>
+         <div class="panel panel-primary">
+          <div class="panel-heading">
+           <a ng-show="vm.isLoggedIn" ng-click="vm.popupPowerForm()" class="btn btn-default pull-right">Input</a>
+           <!--<a ng-hide="vm.isLoggedIn" href="/#/login?page={{ vm.currentPath }}" class="btn btn-default pull-right">Login to Update</a>-->
+           <h2 class="panel-title">Power Section Information</h2>
+         </div>
+         <div class="panel-body">
+          <p ng-repeat="site in vm.data.location.powers">
+           <span class="label label-warning"> <span class="glyphicon glyphicon-ok"></span> {{ site.powerText }} </span>
+         </p>
+       </div>
+     </div>
+     <div class="panel panel-primary">
+      <div class="panel-heading">
+        <a ng-show="vm.isLoggedIn" ng-click="vm.popupStaffForm()" class="btn btn-default pull-right">Input</a>
+        <!--<a ng-hide="vm.isLoggedIn" href="/#/login?page={{ vm.currentPath }}" class="btn btn-default pull-right">Login to Update</a>-->
+        <h2 class="panel-title">Staff Mapping</h2>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="panel panel-primary review-panel">
-            <div class="panel-heading">
-              <a ng-show="vm.isLoggedIn" ng-click="vm.popupReviewForm()" class="btn btn-default pull-right">Preventive Maintenance</a>
-              <a ng-hide="vm.isLoggedIn" href="/#/login?page={{ vm.currentPath }}" class="btn btn-default pull-right">Login to Fill PM Info</a>
-              <h2 class="panel-title">PM History</h2>
-            </div>
-            <div class="panel-body review-container">
-              <div class="row">
-                <div class="review" ng-repeat="review in vm.data.location.reviews | orderBy:'createdOn':true">
-                  <div class="well well-sm review-header">                  
-                    <span class="reviewAuthor">{{ review.author }}</span>
-                    <small class="reviewTimestamp">{{ review.createdOn | date : 'd MMMM yyyy' }}</small>
-                  </div>
-                  <div class="col-xs-12">
-                    <p ng-bind-html="review.reviewText | addHtmlLineBreaks"></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="panel-body">
+        <p ng-repeat="site in vm.data.location.staffs">
+          <span class="label label-warning"><span class="glyphicon glyphicon-ok"></span>{{ site.staffText }}</span>
+
+        </p>
       </div>
-    </div>
-    <div class="col-xs-12 col-md-3">
-      <p class="lead">{{ vm.data.location.name }} is on Site-Locator.</p>
-      <p>If you've been there and done Preventive Maintenance please register(login) and leave important information to help other colleagues.</p>
     </div>
   </div>
-  <footer-generic></footer-generic>
+  <div class="col-xs-12 col-sm-6 location-map">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2 class="panel-title">Location map</h2>
+      </div>
+      <div class="panel-body">  
+       <img src="http://maps.googleapis.com/maps/api/staticmap?center={{ vm.data.location.coords[1] }},{{ vm.data.location.coords[0] }}&amp;zoom=17&amp;size=400x900&amp;sensor=false&amp;maptype=hybrid&amp;markers={{ vm.data.location.coords[1] }},{{ vm.data.location.coords[0] }}&amp;scale=2" class="img-responsive img-rounded"></div>
+     </div>
+   </div>
+ </div>
+ <div class="row">
+  <div class="col-xs-12">
+    <div class="panel panel-primary review-panel">
+      <div class="panel-heading">
+        <a ng-show="vm.isLoggedIn" ng-click="vm.popupReviewForm()" class="btn btn-default pull-right">Preventive Maintenance</a>
+        <!--<a ng-hide="vm.isLoggedIn" href="/#/login?page={{ vm.currentPath }}" class="btn btn-default pull-right">Login to Fill PM Info</a>-->
+        <h2 class="panel-title">PM History</h2>
+      </div>
+      <div class="panel-body review-container">
+        <div class="row">
+          <div class="review" ng-repeat="review in vm.data.location.reviews | orderBy:'createdOn':true">
+            <div class="well well-sm review-header">                  
+              <span class="reviewAuthor">{{ review.author }}</span>
+              <small class="reviewTimestamp">{{ review.createdOn | date : 'd MMMM yyyy' }}</small>
+            </div>
+            <div class="col-xs-12">
+              <p ng-bind-html="review.reviewText | addHtmlLineBreaks"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="col-xs-12 col-md-3">
+  <p class="lead">{{ vm.data.location.name }} is on Site In4mer.</p>
+  <p>If you've been to this Network Element and have important information please contact the admin to update the data.</p>
+</div>
+</div>
+<footer-generic></footer-generic>
 </div>
