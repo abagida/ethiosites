@@ -135,6 +135,7 @@ module.exports.generalsUpdateOne = function(req, res) {
   );
 };
 
+
 module.exports.generalsReadOne = function(req, res) {
   console.log("Getting single review");
   if (req.params && req.params.locationid && req.params.generalid) {
