@@ -25,12 +25,6 @@ router.get('/locations/:locationid', ctrlLocations.locationsReadOne);
 router.put('/locations/:locationid', ctrlLocations.locationsUpdateOne);
 router.delete('/locations/:locationid', ctrlLocations.locationsDeleteOne);
 
-// Generals
-router.post('/locations/:locationid/generals', auth, ctrlGenerals.generalsCreate);
-router.get('/locations/:locationid/generals/:generalid', ctrlGenerals.generalsReadOne);
-router.put('/locations/:locationid/generals/:generalid', auth, ctrlGenerals.generalsUpdateOne);
-router.delete('/locations/:locationid/generals/:generalid', auth, ctrlGenerals.generalsDeleteOne);
-
 
 // reviews
 router.post('/locations/:locationid/reviews', auth, ctrlReviews.reviewsCreate);
