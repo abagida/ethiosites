@@ -24,7 +24,7 @@ module.exports.generalsCreate = function(req, res) {
               doAddGeneral(req, res, location, userName);
             }
           }
-      );
+      ); 
     } else {
       sendJSONresponse(res, 404, {
         "message": "Not found, locationid required"
