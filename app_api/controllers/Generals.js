@@ -2,7 +2,6 @@ var mongoose = require('mongoose');
 var Loc = mongoose.model('Location');
 var User = mongoose.model('User');
 
-
 var sendJSONresponse = function(res, status, content) {
   res.status(status);
   res.json(content);
@@ -25,7 +24,7 @@ module.exports.generalsCreate = function(req, res) {
               doAddGeneral(req, res, location, userName);
             }
           }
-      ); 
+      );
     } else {
       sendJSONresponse(res, 404, {
         "message": "Not found, locationid required"
