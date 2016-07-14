@@ -1,29 +1,28 @@
-
 (function () {
 
   angular
     .module('ethiosite')
-    .controller('reviewModalCtrl', reviewModalCtrl);
+    .controller('ranModalCtrl', ranModalCtrl);
 
-  reviewModalCtrl.$inject = ['$modalInstance', 'loc8rData', 'locationData'];
-  function reviewModalCtrl ($modalInstance, loc8rData, locationData) {
+  ranModalCtrl.$inject = ['$modalInstance', 'loc8rData', 'locationData'];
+  function ranModalCtrl ($modalInstance, loc8rData, locationData) {
     var vm = this;
     vm.locationData = locationData;
 
     vm.onSubmit = function () {
       vm.formError = "";
-      if (!vm.formData.reviewText) {
+      if (!vm.formData.ranText) {
         vm.formError = "All fields required, please try again";
         return false;
       } else {
-        vm.doAddReview(vm.locationData.locationid, vm.formData);
+        vm.doAddRan(vm.locationData.locationid, vm.formData);
       }
     };
 
-    vm.doAddReview = function (locationid, formData) {
-      loc8rData.addReviewById(locationid, {
+    vm.doAddRan = function (locationid, formData) {
+      loc8rData.addRanById(locationid, {
         
-        reviewText : formData.reviewText
+        ranText : formData.ranText
       })
         .success(function (data) {
           vm.modal.close(data);
