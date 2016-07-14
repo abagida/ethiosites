@@ -15,7 +15,6 @@ var ctrlRans = require('../controllers/rans');
 var ctrlIps = require('../controllers/ips');
 var ctrlPowers = require('../controllers/powers');
 var ctrlStaffs = require('../controllers/staffs');
-var ctrlGenerals = require('../controllers/generals');
 
 
 
