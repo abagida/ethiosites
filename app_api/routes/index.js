@@ -10,6 +10,11 @@ var ctrlLocations = require('../controllers/locations');
 var ctrlReviews = require('../controllers/reviews');
 var ctrlAuth = require('../controllers/authentication');
 var ctrlTransmissions = require('../controllers/transmissions');
+var ctrlCores = require('../controllers/cores');
+var ctrlRans = require('../controllers/rans');
+var ctrlIps = require('../controllers/ips');
+var ctrlPowers = require('../controllers/powers');
+var ctrlStaffs = require('../controllers/staffs');
 
 
 router.get('/locations', ctrlLocations.locationsListByDistance);
@@ -29,6 +34,38 @@ router.post('/locations/:locationid/transmissions', auth, ctrlTransmissions.tran
 router.get('/locations/:locationid/transmissions/:transmissionid', ctrlTransmissions.transmissionsReadOne);
 router.put('/locations/:locationid/transmissions/:transmissionid', auth, ctrlTransmissions.transmissionsUpdateOne);
 router.delete('/locations/:locationid/transmissions/:transmissionid', auth, ctrlTransmissions.transmissionsDeleteOne);
+
+
+//cores
+router.post('/locations/:locationid/cores', auth, ctrlCores.coresCreate);
+router.get('/locations/:locationid/cores/:coreid', ctrlCores.coresReadOne);
+router.put('/locations/:locationid/cores/:coreid', auth, ctrlCores.coresUpdateOne);
+router.delete('/locations/:locationid/cores/:coreid', auth, ctrlCores.coresDeleteOne);
+
+//rans
+router.post('/locations/:locationid/rans', auth, ctrlRans.ransCreate);
+router.get('/locations/:locationid/rans/:ranid', ctrlRans.ransReadOne);
+router.put('/locations/:locationid/rans/:ranid', auth, ctrlRans.ransUpdateOne);
+router.delete('/locations/:locationid/rans/:ranid', auth, ctrlRans.ransDeleteOne);
+
+//ips
+router.post('/locations/:locationid/ips', auth, ctrlIps.ipsCreate);
+router.get('/locations/:locationid/ips/:ipid', ctrlIps.ipsReadOne);
+router.put('/locations/:locationid/ips/:ipid', auth, ctrlIps.ipsUpdateOne);
+router.delete('/locations/:locationid/ips/:ipid', auth, ctrlIps.ipsDeleteOne);
+
+//powers
+router.post('/locations/:locationid/powers', auth, ctrlPowers.powersCreate);
+router.get('/locations/:locationid/powers/:powerid', ctrlPowers.powersReadOne);
+router.put('/locations/:locationid/powers/:powerid', auth, ctrlPowers.powersUpdateOne);
+router.delete('/locations/:locationid/powers/:powerid', auth, ctrlPowers.powersDeleteOne);
+
+//staffs
+router.post('/locations/:locationid/staffs', auth, ctrlStaffs.staffsCreate);
+router.get('/locations/:locationid/staffs/:staffid', ctrlStaffs.staffsReadOne);
+router.put('/locations/:locationid/staffs/:staffid', auth, ctrlStaffs.staffsUpdateOne);
+router.delete('/locations/:locationid/staffs/:staffid', auth, ctrlStaffs.staffsDeleteOne);
+
 
 // authentication
 router.post('/register', ctrlAuth.register);
