@@ -10,10 +10,73 @@ var reviewSchema = new mongoose.Schema({
     }
 });
 
-var siteInfoSchema = new mongoose.Schema({
-    info: {
-        type: String,
-        required: true
+var transmissionSchema = new mongoose.Schema({
+    author: {type: String, required: true},
+   
+    transmissionText: {type: String, required: true},
+    createdOn: {
+        type: Date,
+        "default": Date.now
+    }
+});
+
+var ipSchema = new mongoose.Schema({
+    author: {type: String, required: true},
+   
+    ipText: {type: String, required: true},
+    createdOn: {
+        type: Date,
+        "default": Date.now
+    }
+});
+
+var powerSchema = new mongoose.Schema({
+    author: {type: String, required: true},
+   
+    powerText: {type: String, required: true},
+    createdOn: {
+        type: Date,
+        "default": Date.now
+    }
+});
+
+var staffSchema = new mongoose.Schema({
+    author: {type: String, required: true},
+   
+    staffText: {type: String, required: true},
+    createdOn: {
+        type: Date,
+        "default": Date.now
+    }
+});
+
+var coreSchema = new mongoose.Schema({
+    author: {type: String, required: true},
+   
+    coreText: {type: String, required: true},
+    createdOn: {
+        type: Date,
+        "default": Date.now
+    }
+});
+
+var ranSchema = new mongoose.Schema({
+    author: {type: String, required: true},
+   
+    ranText: {type: String, required: true},
+    createdOn: {
+        type: Date,
+        "default": Date.now
+    }
+});
+
+var generalSchema = new mongoose.Schema({
+     author: {type: String, required: true},
+    
+    generalText: {type: String, required: true},
+     createdOn: {
+        type: Date,
+        "default": Date.now
     }
 });
 
@@ -35,12 +98,13 @@ var locationSchema = new mongoose.Schema({
         type: [Number],
         index: '2dsphere'
     },
-    siteInfo: [siteInfoSchema],
-    transmission: [siteInfoSchema],
-    core: [siteInfoSchema],
-    ran: [siteInfoSchema],
-    ip: [siteInfoSchema],
-    staff: [siteInfoSchema],
+    generals: [generalSchema],
+    transmissions: [transmissionSchema],
+    cores: [coreSchema],
+    rans: [ranSchema],
+    ips: [ipSchema],
+    powers: [powerSchema],
+    staffs: [staffSchema],
     reviews: [reviewSchema]
 
 });
