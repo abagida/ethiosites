@@ -9,7 +9,7 @@
     var vm = this;
 
     vm.pageHeader = {
-      title: 'Sign in to In4mer(admin)'
+      title: 'Sign in to Loc8r'
     };
 
     vm.credentials = {
