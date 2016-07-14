@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 var Loc = mongoose.model('Location');
 var User = mongoose.model('User');
 
+
 var sendJSONresponse = function(res, status, content) {
   res.status(status);
   res.json(content);
