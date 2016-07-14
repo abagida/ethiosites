@@ -9,7 +9,6 @@ var auth = jwt({
 var ctrlLocations = require('../controllers/locations');
 var ctrlReviews = require('../controllers/reviews');
 var ctrlAuth = require('../controllers/authentication');
-var ctrlGenerals = require('../controllers/generals');
 var ctrlTransmissions = require('../controllers/transmissions');
 var ctrlCores = require('../controllers/cores');
 var ctrlRans = require('../controllers/rans');
